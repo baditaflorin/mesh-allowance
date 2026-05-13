@@ -1,6 +1,3 @@
-/* App-local styles. Mesh chrome (settings drawer, self-ref bar) is provided by
- * @baditaflorin/mesh-common/styles.css imported in main.tsx. */
-
 :root {
   color-scheme: dark;
 }
@@ -19,33 +16,236 @@ body,
   background: var(--mesh-bg);
   color: var(--mesh-fg);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-  -webkit-tap-highlight-color: transparent;
 }
 
-.feature-placeholder {
-  padding: 6rem 1.5rem 2rem;
-  text-align: center;
+.all-screen {
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: 4.5rem 1.25rem 6rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1rem;
 }
 
-.feature-placeholder h1 {
+.all-header h1 {
   font-size: 1.6rem;
-  margin: 0;
+  margin: 0 0 0.25rem;
   color: var(--mesh-accent);
 }
 
-.feature-placeholder p {
-  max-width: 32rem;
+.all-status {
   margin: 0;
-  opacity: 0.85;
-  line-height: 1.5;
+  opacity: 0.7;
+  font-size: 0.9rem;
 }
 
-.feature-status {
-  font-size: 0.85rem;
-  opacity: 0.6;
+.all-add-kid {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.all-add-kid input {
+  flex: 1;
+  padding: 0.65rem 0.85rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--mesh-fg);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.4rem;
+}
+
+.all-add-kid button,
+.all-add-chore button {
+  padding: 0.5rem 1rem;
+  background: var(--mesh-accent);
+  color: #0e1117;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.all-add-kid button:disabled,
+.all-add-chore button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.all-empty {
+  opacity: 0.5;
+  font-style: italic;
+  text-align: center;
+}
+
+.all-empty-sub {
+  opacity: 0.5;
+  font-style: italic;
+  margin: 0.3rem 0;
+}
+
+.all-kid {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 0.6rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.all-kid-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.all-kid-name strong {
+  font-size: 1.1rem;
+}
+
+.all-kid-balance {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.all-balance-amt {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--mesh-accent);
   font-variant-numeric: tabular-nums;
+}
+
+.all-cashout {
+  padding: 0.4rem 0.8rem;
+  background: transparent;
+  color: var(--mesh-fg);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.all-cashout:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.all-chore-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.all-chore-group h3 {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  opacity: 0.6;
+  margin: 0;
+}
+
+.all-pending h3 {
+  color: #fbbf24;
+  opacity: 0.95;
+}
+
+.all-chore {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 0.4rem;
+  align-items: center;
+  padding: 0.45rem 0.7rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 0.35rem;
+}
+
+.all-pending .all-chore {
+  background: rgba(251, 191, 36, 0.12);
+}
+
+.all-chore-label {
+  font-weight: 500;
+}
+
+.all-chore-value {
+  color: var(--mesh-accent);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.all-btn {
+  padding: 0.35rem 0.7rem;
+  background: transparent;
+  color: var(--mesh-fg);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0.35rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.all-btn-done {
+  background: rgba(236, 72, 153, 0.18);
+  border-color: rgba(236, 72, 153, 0.5);
+}
+
+.all-btn-verify {
+  background: var(--mesh-accent);
+  color: #0e1117;
+  border-color: var(--mesh-accent);
+  font-weight: 600;
+}
+
+.all-add-chore {
+  display: grid;
+  grid-template-columns: 1fr 6rem auto;
+  gap: 0.4rem;
+}
+
+.all-add-chore input {
+  padding: 0.55rem 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--mesh-fg);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.35rem;
+}
+
+.all-history {
+  font-size: 0.9rem;
+}
+
+.all-history summary {
+  cursor: pointer;
+  opacity: 0.65;
+  padding: 0.3rem 0;
+}
+
+.all-history ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.all-history li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 0;
+  opacity: 0.8;
+}
+
+.all-kid-rm {
+  align-self: flex-end;
+  background: transparent;
+  color: var(--mesh-fg);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.35rem;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+.all-kid-rm:hover {
+  opacity: 1;
+  border-color: rgba(255, 90, 90, 0.6);
+  color: #ff6b6b;
 }
