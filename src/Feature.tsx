@@ -151,7 +151,15 @@ function Body({ room }: { room: YRoom }) {
 
       <section className="all-kids">
         {kidList.length === 0 ? (
-          <p className="all-empty">no kids yet — add one above</p>
+          <div className="all-empty">
+            <p>No kids yet — add one above to start.</p>
+            <p className="all-empty-how">
+              How it works: the kid taps <strong>mark done</strong> on a chore, a parent taps{" "}
+              <strong>verify</strong>, and the chore&rsquo;s value lands in the balance. Open this
+              page in a second tab (or share the 📡 invite) and both stay in sync — one tab for the
+              parent, one for the kid.
+            </p>
+          </div>
         ) : (
           kidList.map((kid) => {
             const myChores = choresByKid.get(kid.id) ?? [];

@@ -16,7 +16,18 @@ Tip the dev: **https://www.paypal.com/paypalme/florinbadita**
 
 ## What it is
 
-Peer-to-peer browser app, no backend of its own beyond the self-hosted WebRTC stack listed below. Built on `@baditaflorin/mesh-common`, hosted on GitHub Pages from `docs/`.
+A shared allowance board for a family. A kid taps **mark done** on a chore; a
+parent taps **verify**; the chore's value lands in that kid's balance. Everyone
+who opens the same room sees the same board update live — no account, no server
+holding your data.
+
+**Try it in 30 seconds:** open the live link, add a kid and a chore, then open
+the same page in a second browser tab (or share the 📡 invite QR). Add a chore
+in one tab, watch it appear in the other. One tab is the parent, one is the kid.
+
+Peer-to-peer browser app, no backend of its own beyond the self-hosted WebRTC
+stack listed below. Built on `@baditaflorin/mesh-common`, hosted on GitHub Pages
+from `docs/`.
 
 ## Quickstart (local)
 
