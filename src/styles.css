@@ -71,9 +71,23 @@ body,
 }
 
 .all-empty {
-  opacity: 0.5;
-  font-style: italic;
+  opacity: 0.6;
   text-align: center;
+}
+
+.all-empty > p {
+  margin: 0.6rem 0;
+  font-style: italic;
+}
+
+.all-empty-how {
+  max-width: 30rem;
+  margin: 0.6rem auto 0;
+  font-style: normal;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: left;
+  opacity: 0.85;
 }
 
 .all-empty-sub {
